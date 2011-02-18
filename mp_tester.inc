@@ -21,14 +21,14 @@
  * 
  * 4. Run through the data array, looking for collisions and existing matches in the current table. 
  * 5. Update the database or the data array depending on the situation.
- * 		Id doesn't exist: add a new one
- * 		Id exists, but the titles are the same: update hint
- * 		Id exists, but title is different: collision!
- * 			Title exists with different Id: use that Id
- * 			Title doesn't exist: get new Id, use that, insert
+ *     Id doesn't exist: add a new one
+ *     Id exists, but the titles are the same: update hint
+ *     Id exists, but title is different: collision!
+ *       Title exists with different Id: use that Id
+ *       Title doesn't exist: get new Id, use that, insert
  * 
  * 6. We took care of the collisions, and the linkage array knows about the updated ids. We should just be able
- * 			to insert new rows and update existing ones without worrying about breaking linkages.
+ *       to insert new rows and update existing ones without worrying about breaking linkages.
  * 
  * 7. Run through the linkage table. Update it if exists, insert if it doesn't.
  */
